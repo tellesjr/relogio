@@ -93,7 +93,7 @@ function interagir () {
     } else {
 
     }
-    
+    // alteração 2.0
     if (hora >= 24) {
         window.alert('[ERRO] Digide um número entre 0 e 23!')
         
