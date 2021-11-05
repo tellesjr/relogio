@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Certa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>
+            Hora Certa
+        </h1>
+    </header>
+
+    <section>
+        <div id="msg">
+            hora vai aparcer aqui
+        </div>
+
+        <div id="img">
+           <img src="imagens/manhac.jpg" alt="foto do amanhecer" id="foto">
+        </div>
+
+        <div class="horaMAnual">
+           <p>Digite entre 0 e 24</p>
+           <p><input type="number" id="horaMAnual"></p>
+           <p><input type="button" value="InterAgir" onclick="interagir()" id="interagir"></p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>
+            <a href="https://www.instagram.com/tech_telles/">&copy; TellesJr</a>
+        </p>
+    </footer>
+</body>
+</html>
