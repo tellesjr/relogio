@@ -22,7 +22,7 @@
 
     msg.innerHTML = `<strong>Hora:</strong> ${hora}:${minutos}`
 
-    if (hora >= 18 && hora < 23) {
+    if (hora >= 18 && hora <= 23) {
         foto.src = 'imagens/noitec.jpg'
         document.body.style.background = '#3f4249'
         
