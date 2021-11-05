@@ -22,20 +22,22 @@
 
     msg.innerHTML = `<strong>Hora:</strong> ${hora}:${minutos}`
 
-    if (hora >= 18 && hora <= 23) {
-        foto.src = 'imagens/noitec.jpg'
-        document.body.style.background = '#3f4249'
+    if (hora >= 0 && hora < 6) {
+        foto.src = 'imagens/madrugadac.jpg'
+        document.body.style.background = '#081a1c'
         
+    } else if (hora >= 6 && hora < 12) {
+        foto.src = 'imagens/manhac.jpg'
+        document.body.style.background = '#fb8428'
     } else if (hora >= 12 && hora < 18) {
         foto.src = 'imagens/tardec.jpg'
         document.body.style.background = '#c84a17'
-    } else if (hora >= 0 && hora < 6){
-        foto.src = 'imagens/madrugadac.jpg'
-        document.body.style.background = '#081a1c'
 
+    } else if (hora >= 18 && hora <= 23) {
+        foto.src = 'imagens/noitec.jpg'
+        document.body.style.background = '#3f4249'
     } else {
-        foto.src = 'imagens/manhac.jpg'
-        document.body.style.background = '#fb8428'
+
     }
 
     
@@ -53,6 +55,7 @@ function interagir () {
     let segundos = data.getSeconds()
     let horaM = window.document.querySelector('#horaMAnual')
     let horaMAnual = Number(horaM.value)
+    
       
     
     
@@ -73,24 +76,37 @@ function interagir () {
 
     msg.innerHTML = `<strong>Hora:</strong> ${hora}:${minutos}`
 
-    if (hora >= 18 && hora <= 23) {
-        foto.src = 'imagens/noitec.jpg'
-        document.body.style.background = '#3f4249'
+    if (hora >= 0 && hora < 6) {
+        foto.src = 'imagens/madrugadac.jpg'
+        document.body.style.background = '#081a1c'
         
+    } else if (hora >= 6 && hora < 12) {
+        foto.src = 'imagens/manhac.jpg'
+        document.body.style.background = '#fb8428'
     } else if (hora >= 12 && hora < 18) {
         foto.src = 'imagens/tardec.jpg'
         document.body.style.background = '#c84a17'
-    } else if (hora >= 0 && hora < 6) {
-        foto.src = 'imagens/madrugadac.jpg'
-        document.body.style.background = '#081a1c'
 
+    } else if (hora >= 18 && hora <= 23) {
+        foto.src = 'imagens/noitec.jpg'
+        document.body.style.background = '#3f4249'
     } else {
-        foto.src = 'imagens/manhac.jpg'
-        document.body.style.background = '#fb8428'
+
     }
     
-    if (hora > 24) {
-        window.alert('[ERRO] Digide um número entre 0 e 24!')
+    if (hora >= 24) {
+        window.alert('[ERRO] Digide um número entre 0 e 23!')
+        
+        horaMAnual = data.getHours()
+        minutos = data.getMinutes()
+        if(horaMAnual < 10) {
+            horaMAnual = "0"+horaMAnual
+        } if (minutos < 10) {
+            minutos = "0"+minutos
+        } if (segundos < 10) {
+            segundos = "0"+segundos
+        }
+        msg.innerHTML = `<strong>Hora:</strong> ${horaMAnual}:${minutos}`
     }
 
     
