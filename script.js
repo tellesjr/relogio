@@ -9,7 +9,7 @@
     setInterval(carregar, 30000)
     
     
-    
+    // tops
     
     if(hora < 10) {
         hora = "0"+hora
